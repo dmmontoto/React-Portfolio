@@ -5,6 +5,13 @@
   text-align: center;
 }
 
+body {
+  background-color: rgb(32, 32, 32);
+  background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,1)), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+  background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
+  background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -39,4 +46,42 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.contact-section {
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+  animation-delay: 1.2s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: backwards;
+  margin-bottom: 50px;
+}
+
+.link {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-section img,
+.link img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  transition: filter 0.3s ease; /* Add a smooth transition effect */
+  color: var(--main-blue);
+
+  transition: transform 0.3s ease-in-out 0s;
+}
+
+.contact-section img:hover,
+.link img:hover {
+  filter: brightness(1.5); /* Adjust the value to make the icon brighter on hover */
+  transform: translateY(-10px);
+}
+
+.contact-section a{
+  text-decoration: none;
 }
