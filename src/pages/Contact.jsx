@@ -1,20 +1,43 @@
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 export default function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    const btn = document.getElementById('button');
+    const user_name = document.getElementById('user_name');
+    const user_email = document.getElementById('user_email');
+    const description = document.getElementById('message');
+
+    emailjs.sendForm('service_rxk2nr8', 'template_0kv42on', form.current, 'p3zkL-2Zmd6sN7Zge')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+    btn.value = 'Email Sent!';
+    user_name.value = '';
+    user_email.value = '';
+    description.value = '';
+  };
+
   return (
     <div>
-      <h1>Contact Page</h1>
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
+      <form ref={form} onSubmit={sendEmail}>
+        <h3>Get in Touch</h3>
+
+        <input type="text" name="user_name" id="user_name" placeholder="Name" required/>
+
+        <input type="email" name="user_email" id="user_email" placeholder="Email" required/>
+
+        <input type="text" name="message" id="message" placeholder="How may I help you?" required/>
+
+        <input type="submit" id="button" value="Send Email"/>
+      </form>
     </div>
   );
 }
