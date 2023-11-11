@@ -26,8 +26,8 @@ export default function Contact() {
   };
 
   return (
-    <div>
-      <form ref={form} onSubmit={sendEmail}>
+    <div className="contact-container"> 
+      <form ref={form} onSubmit={sendEmail} id="form">
         <h3>Get in Touch</h3>
 
         <input type="text" name="user_name" id="user_name" placeholder="Name" required/>
