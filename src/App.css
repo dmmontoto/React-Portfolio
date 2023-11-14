@@ -79,6 +79,7 @@ body {
   animation-direction: normal;
   animation-fill-mode: backwards;
   margin-bottom: 40px;
+  margin-top: 400px;
 }
 
 .link {

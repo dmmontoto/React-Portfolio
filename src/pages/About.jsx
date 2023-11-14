@@ -1,4 +1,7 @@
 import { useEffect } from 'react';
+
+import TiltCard from '../components/Tilt';  
+
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 export default function About() {
@@ -127,8 +130,9 @@ export default function About() {
           </div>
           <div className="col-md-6">
             <div className="glass-container">
-              <div className="glass-card">
-                <div className="glass-content">
+              <TiltCard options={{ "glare-prerender": false }}>
+                <div className="glass-card">
+                 <div className="glass-content">
                   <h2>Where I am From</h2>
                   <p>Having grown up in the vibrant city of Pasadena, adjacent to the Jet Propulsion Laboratory, my curiosity for
                     science and mathematics was kindled at an early age. With my mother working at JPL, I was privileged to peek
@@ -137,8 +141,9 @@ export default function About() {
                     weaving together my passion for technology and innovation. As I traverse the realm of software engineering, my
                     roots in mathematics remain a guiding light, driving me to master web projects, advanced data structures, and
                     backend development, creating solutions that resonate.</p>
+                  </div>
                 </div>
-              </div>
+              </TiltCard>
             </div>
           </div>
         </div>
@@ -148,6 +153,7 @@ export default function About() {
         <div className="row">
           <div className="col-md-6">
             <div className="glass-container">
+            <TiltCard options={{ "glare-prerender": false }}>
               <div className="glass-card">
                 <div className="glass-content">
                   <h2>Passion for Software Engineering</h2>
@@ -158,6 +164,7 @@ export default function About() {
                   </p>
                 </div>
               </div>
+              </TiltCard>
             </div>
           </div>
           <div className="col-md-6  d-flex justify-content-center align-items-center">
@@ -204,6 +211,7 @@ export default function About() {
           </div>
           <div className="col-md-6">
             <div className="glass-container">
+            <TiltCard options={{ "glare-prerender": false }}>
               <div className="glass-card">
                 <div className="glass-content">
                   <h2>A Pathway to Impact</h2>
@@ -216,6 +224,7 @@ export default function About() {
                   </p>
                 </div>
               </div>
+              </TiltCard>
             </div>
           </div>
         </div>
