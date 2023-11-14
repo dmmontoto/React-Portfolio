@@ -76,6 +76,33 @@ export default function About() {
     clock();
   }, []);
 
+  // Cloud method
+  useEffect(() => {
+    function rain() {
+      let cloud = document.querySelector('.cloud');
+      let e = document.createElement('div');
+      let left = Math.floor(Math.random() * 310);
+      let width = Math.random() * 5;
+      let height = Math.random() * 50;
+      let duration = Math.random() * 0.5;
+  
+      e.classList.add('drop');
+      cloud.appendChild(e);
+      e.style.left = left + 'px';
+      e.style.width = 0.5 + width + 'px';
+      e.style.height = 0.5 + height + 'px';
+      e.style.animationDuration = 1 + duration + 's';
+
+      setTimeout(function(){
+        cloud.removeChild(e)
+      },2000)
+    }
+
+    setInterval(function(){
+      rain()
+    },20);
+  }, []);
+
   return (
     <div>
       <div className="container">
@@ -171,7 +198,7 @@ export default function About() {
                   <h2>A Pathway to Impact</h2>
                   <p>Over the past year, I have relentlessly pursued knowledge and skill enhancement, diving deep into software engineering. I have explored data structures, version control, 
                     server architecture, and web development. My toolkit includes languages like Javascript, C++, Java, C, Python, ARM Assembly, R, and MATLAB, each providing a unique lens 
-                    for tackling challenges. With frameworks like Node.js, Express.js, and React.js, I've built proficiency in the MERN stack. Tools like Sequelize, Git, and Visual Studio Code 
+                    for tackling challenges. With frameworks like Node.js, Express.js, and React.js, I have built proficiency in the MERN stack. Tools like Sequelize, Git, and Visual Studio Code 
                     enable collaborative project development. I have mastered HTML, CSS, Bootstrap, JavaScript, DOM manipulation, APIs, JQuery, JSON, and AJAX, creating engaging user experiences. 
                     This journey is perpetual, presenting daily opportunities to learn and innovate. My commitment goes beyond mastery—it is about using these skills to create impactful change in 
                     the real world, a promise I am dedicated to fulfilling.

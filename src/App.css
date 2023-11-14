@@ -686,5 +686,29 @@ form button {
   inset: 0;
   background: #484f59;
   border-radius: 100px;
+}
 
+.cloud-space .cloud .drop {
+  position: absolute;
+  top: 0;
+  background: #05a2eb;
+  color: #05a2eb;
+  width: 2px;
+  transform-origin: bottom;
+  animation: rain 2s linear infinite;
+}
+
+@keyframes rain {
+  0% {
+    transform: translateY(0) scaleY(1);
+  }
+  70% {
+    transform: translateY(460px) scaleY(1);
+  }
+  80% {
+    transform: translateY(460px) scaleY(0.2);
+  }
+  100% {
+    transform: translateY(460px) scaleY(0) scaleX(15);
+  }
 }
