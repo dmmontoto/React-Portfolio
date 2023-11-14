@@ -1,3 +1,5 @@
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 export default function Home() {
   return (
     <section className="d-flex flex-column justify-content-center align-items-center fs-1" id ="landing">

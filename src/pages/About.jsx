@@ -78,10 +78,6 @@ export default function About() {
 
   return (
     <div>
-      <section className="about-me">
-        <h1 data-text="About Me">About Me</h1>
-      </section>
-
       <div className="container">
         <div className="row">
           <div className="col-md-6">
@@ -153,6 +149,34 @@ export default function About() {
                 <div id="minutes" style={{ '--clr': '#175b93' }}>00</div>
                 <div id="seconds" style={{ '--clr': '#c11515' }}>00</div>
                 <div id="ampm">AM</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6">
+            <div className="cloud-space">
+              <div className="cloud">
+                
+              </div>
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div className="glass-container">
+              <div className="glass-card">
+                <div className="glass-content">
+                  <h2>A Pathway to Impact</h2>
+                  <p>Over the past year, I have relentlessly pursued knowledge and skill enhancement, diving deep into software engineering. I have explored data structures, version control, 
+                    server architecture, and web development. My toolkit includes languages like Javascript, C++, Java, C, Python, ARM Assembly, R, and MATLAB, each providing a unique lens 
+                    for tackling challenges. With frameworks like Node.js, Express.js, and React.js, I've built proficiency in the MERN stack. Tools like Sequelize, Git, and Visual Studio Code 
+                    enable collaborative project development. I have mastered HTML, CSS, Bootstrap, JavaScript, DOM manipulation, APIs, JQuery, JSON, and AJAX, creating engaging user experiences. 
+                    This journey is perpetual, presenting daily opportunities to learn and innovate. My commitment goes beyond mastery—it is about using these skills to create impactful change in 
+                    the real world, a promise I am dedicated to fulfilling.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
