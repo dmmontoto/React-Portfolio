@@ -7,7 +7,7 @@ export default function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    const btn = document.getElementById('button');
+    const btn = document.getElementById('form-button');
     const user_name = document.getElementById('user_name');
     const user_email = document.getElementById('user_email');
     const description = document.getElementById('message');
@@ -20,6 +20,7 @@ export default function Contact() {
       });
 
     btn.value = 'Email Sent!';
+    btn.style.background = 'green';
     user_name.value = '';
     user_email.value = '';
     description.value = '';
@@ -36,7 +37,7 @@ export default function Contact() {
 
         <input type="text" name="message" id="message" placeholder="How may I help you?" required/>
 
-        <input type="submit" id="button" value="Send Email"/>
+        <input type="submit" id="form-button" value="Send Email"/>
       </form>
     </div>
   );

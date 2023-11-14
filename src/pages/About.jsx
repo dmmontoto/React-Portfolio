@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 export default function About() {
+  // Stars method
   useEffect(() => {
     function stars() {
       let count = 50;
@@ -28,23 +29,23 @@ export default function About() {
     stars();
   }, []);
 
+  // Clock method
   useEffect(() => {
     function clock() {
       let hr = document.querySelector('#hr');
       let mn = document.querySelector('#mn');
       let sc = document.querySelector('#sc');
 
-      setInterval(() => {
+      const updateClock = () => {
         let day = new Date();
         let hour = day.getHours() * 30;
         let minute = day.getMinutes() * 6;
         let second = day.getSeconds() * 6;
 
-        hr.style.transform = `rotateZ(${hour+(minute/12)}deg)`;
+        hr.style.transform = `rotateZ(${hour + (minute / 12)}deg)`;
         mn.style.transform = `rotateZ(${minute}deg)`;
         sc.style.transform = `rotateZ(${second}deg)`;
 
-        // Digital
         let hours = document.getElementById('hour');
         let minutes = document.getElementById('minutes');
         let seconds = document.getElementById('seconds');
@@ -54,27 +55,36 @@ export default function About() {
         let m = new Date().getMinutes();
         let s = new Date().getSeconds();
 
-        let am = h >= 12 ? "PM" : "AM";
+        let am = h >= 12 ? 'PM' : 'AM';
 
-        // converting 24hr clock to 12hr
         if (h > 12) {
-            h = h - 12;
+          h = h - 12;
         }
 
-        // add zero before single digit number
-        h = (h < 10) ? "0" + h : h;
-        m = (m < 10) ? "0" + m : m;
-        s = (s < 10) ? "0" + s : s;
+        h = h < 10 ? '0' + h : h;
+        m = m < 10 ? '0' + m : m;
+        s = s < 10 ? '0' + s : s;
 
-        hours.innerHTML = h;
-        minutes.innerHTML = m;
-        seconds.innerHTML = s;
-        ampm.innerHTML = am;
-      })
+        if (hours && minutes && seconds && ampm) {
+          hours.innerHTML = h;
+          minutes.innerHTML = m;
+          seconds.innerHTML = s;
+          ampm.innerHTML = am;
+        }
+      };
+
+      updateClock(); // Initial update
+
+      const intervalId = setInterval(updateClock, 1000);
+
+      return () => clearInterval(intervalId);
     }
 
-    clock();
+    const intervalId = clock();
+
+    return () => clearInterval(intervalId);
   }, []);
+
 
   // Cloud method
   useEffect(() => {
@@ -98,9 +108,10 @@ export default function About() {
       },2000)
     }
 
-    setInterval(function(){
-      rain()
-    },20);
+    const intervalId = setInterval(rain, 20);
+
+    // Clean up the interval when the component is unmounted
+    return () => clearInterval(intervalId);
   }, []);
 
   return (

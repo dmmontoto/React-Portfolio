@@ -10,7 +10,7 @@ export default function Home() {
         <p>I am a software engineer hailing from sunny Southern California and proudly studying at the University of California,
           San Diego. With a strong foundation in web projects,
           I bring expertise in advanced data structures and backend development to create impactful solutions.</p>
-        <div className="scroll"  style={{ "--t": "40s" }}>
+        <div className="scroll"  style={{ "--t": "45s" }}>
           <div>
             <span>Javascript</span>
             <span>React.js</span>
@@ -72,7 +72,7 @@ export default function Home() {
             <span>JSON</span>
           </div>
         </div>
-        <div className="scroll"  style={{ "--t": "60s" }}>
+        <div className="scroll"  style={{ "--t": "65s" }}>
           <div>
             <span>Javascript</span>
             <span>React.js</span>
@@ -134,7 +134,7 @@ export default function Home() {
             <span>JSON</span>
           </div>
         </div>
-        <div className="scroll"  style={{ "--t": "30s" }}>
+        <div className="scroll"  style={{ "--t": "35s" }}>
           <div>
             <span>Javascript</span>
             <span>React.js</span>
@@ -196,7 +196,7 @@ export default function Home() {
             <span>JSON</span>
           </div>
         </div>
-        <div className="scroll"  style={{ "--t": "50s" }}>
+        <div className="scroll"  style={{ "--t": "55s" }}>
           <div>
             <span>Javascript</span>
             <span>React.js</span>

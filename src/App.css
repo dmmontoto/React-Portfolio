@@ -280,7 +280,7 @@ body {
 }
 
 form {
-  background: #fff;
+  background: var(--clock-grey);
   display: flex;
   flex-direction: column;
   padding: 2vw 4vw;
@@ -290,10 +290,11 @@ form {
 }
 
 form h3 {
-  color: #555;
+  color: var(--main-blue);
   font-weight: 800;
   font-size: 25px;
   margin-bottom: 20px;
+  letter-spacing: .1em;
 }
 
 form input, 
@@ -301,8 +302,9 @@ form textarea {
   border: 0;
   margin: 10px 0;
   padding: 20px;
-  background: #f5f5f5;
+  background: var(--secondary-grey);
   font-size: 16px;
+  border-radius: 10px;
 }
 
 form button {
@@ -316,6 +318,10 @@ form button {
   width: 150px;
   margin: 20px auto 0;
   border-radius: 30px;
+}
+
+#form-button:hover {
+  background: var(--main-blue);
 }
 
 /* About Me Page */
@@ -643,14 +649,14 @@ form button {
 .cloud-space {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 830px;
   display: flex;
   justify-content: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .cloud-space .cloud {
-  margin-top: 25%;
+  margin-top: 42%;
   position: relative;
   height: 100px;
   width: 320px;
@@ -690,7 +696,7 @@ form button {
 
 .cloud-space .cloud .drop {
   position: absolute;
-  top: 0;
+  top: 50px;
   background: #05a2eb;
   color: #05a2eb;
   width: 2px;
