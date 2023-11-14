@@ -18,6 +18,8 @@ body {
   color: white;
 }
 
+/* NAV */
+
 .bg-secondary {
   background-color: var(--main-blue) !important;
   display: flex !important;
