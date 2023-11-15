@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import VanillaTilt from 'vanilla-tilt';
 
 function TiltCard(props) {
+  // eslint-disable-next-line react/prop-types
   const { options, children } = props;
   const tilt = useRef(null);
 
