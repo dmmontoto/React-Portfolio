@@ -1,11 +1,42 @@
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 export default function Group() {
     return (
-      <div id="resume">
-      <div className="iframe">
-        <iframe width="750" height="1200"
-            src="https://docs.google.com/document/d/e/2PACX-1vRkAaegOTkbgRZ9_24Zzz1FOdadDYLSoj1SXQiloJc53uhOrdfkTB_yl-l1ZuzWgtN2W2jWLHY10uNx/pub?embedded=true"></iframe>
+      <div>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <div className='Project-Card' style={{ '--clr': '#009688' }}>
+                <div className='imgBx'></div>
+                <div className='Project-Content'></div>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className='Project-Card' style={{ '--clr': '#ff3e7f' }}>
+                <div className='imgBx'></div>
+                <div className='Project-Content'></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <div className='Project-Card' style={{ '--clr': '#009688' }}>
+                <div className='imgBx'></div>
+                <div className='Project-Content'></div>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className='Project-Card' style={{ '--clr': '#009688' }}>
+                <div className='imgBx'></div>
+                <div className='Project-Content'></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
     );
   }
   
