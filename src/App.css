@@ -737,7 +737,7 @@ form button {
   justify-content: center;
   align-items: flex-start;
   width: 500px;
-  height: 300px;
+  height: 340px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   box-shadow: 0 35px 80px rgba(0,0,0,0.15); 
@@ -745,17 +745,22 @@ form button {
   border-left: 1px solid rgba(255,255,255,0.5);
   backdrop-filter: blur(5px);
   transition: 0.5s;
+  margin-top: 120px;
+}
+
+.Bottom-Card {
+  margin-bottom: 50px;
 }
 
 .Project-Card:hover {
-  height: 400px;
+  height: 800px;
 }
 
 .Project-Card .imgBx {
   position: absolute;
   top: 20px;
-  width: 250px;
-  height: 200px;
+  width: 440px;
+  height: 250px;
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
@@ -782,26 +787,77 @@ form button {
   width: 100%;
   padding: 0 30px;
   text-align: center;
-  top: 252px;
-  height: 50px;
+  top: 285px;
+  height: 40px;
   overflow: hidden;
   transition: 0.5s;
 }
 
 .Project-Card:hover .Project-Content {
   top: 150px;
-  height: 200px;
+  height: 700px;
 }
 
 .Project-Card .Project-Content h2 {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 700;
   color: var(--main-blue);
+  letter-spacing: 0.05em;
 }
 
-.Project-Card .Project-Content  {
+.Project-Card .Project-Content h5 {
+  font-size: 1em;
+}
+
+.Project-Card .Project-Content ul li {
   font-size: 1.05em;
   color: var(--secondary-grey);
+}
+
+/* Styles for the ul with id "bullets" */
+#bullets {
+  list-style: none; 
+  padding-left: 0; 
+  color: var(--secondary-grey);
+}
+
+/* Styles for the li elements inside the "bullets" list */
+#bullets li {
+  position: relative; /* Required for pseudo-elements */
+  padding: 5px;
+  padding-left: 5ch;
+}
+
+/* Style the ::marker pseudo-element for the first li */
+#bullets li:nth-child(1)::before {
+  content: "»";
+  font-size: 3em;
+  color: rgb(23, 91, 147);
+  position: absolute;
+  left: 0;
+}
+
+/* Style the ::marker pseudo-element for the second li */
+#bullets li:nth-child(2)::before {
+  content: "»";
+  font-size: 2.5em;
+  color: rgb(23, 57, 102); 
+  position: absolute;
+  left: 0;
+}
+
+/* Style the ::marker pseudo-element for the third li */
+#bullets li:nth-child(3)::before {
+  content: "»";
+  font-size: 2em;
+  color: rgb(23, 37, 87); 
+  position: absolute;
+  left: 0;
+}
+
+/* Optional: Set a maximum width for the list */
+#bullets ul, #bullets ol {
+  max-width: 35ch;
 }
 
 /* Resume */
