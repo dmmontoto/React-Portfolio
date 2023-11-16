@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-export default function Group() {
+export default function Projects() {
   const [isWebsiteHovered, setIsWebsiteHovered] = useState(false);
   const [isGitHubHovered, setIsGitHubHovered] = useState(false);
 
@@ -59,7 +59,7 @@ export default function Group() {
 
                 </div>
                 <div className='Project-Content'>
-                  
+
                 </div>
               </div>
             </div>

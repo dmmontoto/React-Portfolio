@@ -10,8 +10,7 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import Resume from './pages/Resume';
-import Group from './pages/Group';
-import Learn from './pages/Learn';
+import Projects from './pages/Projects';
 
 // Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
@@ -29,12 +28,8 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: '/Group',
-        element: <Group />,
-      },
-      {
-        path: '/Learn',
-        element: <Learn />,
+        path: '/Projects',
+        element: <Projects />,
       },
       {
         path: '/Resume',

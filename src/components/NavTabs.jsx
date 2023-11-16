@@ -31,8 +31,14 @@ function NavTabs() {
         >
           About
         </Link>
-
-            <NavDropdown title="Projects" id="basic-nav-dropdown">
+        <Link
+          to="/Projects"
+          // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          className={currentPage === '/Projects' ? 'nav-link active' : 'nav-link'}
+        >
+          Projects
+        </Link>
+            <NavDropdown title="Experience & Extracurriculars" id="basic-nav-dropdown">
               <NavDropdown.Item href="../Contact">NASA Mars Imaging</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
@@ -43,20 +49,6 @@ function NavTabs() {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
-            <Link
-          to="/Group"
-          // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === '/Group' ? 'nav-link active' : 'nav-link'}
-        >
-          Group Projects
-        </Link>
-        <Link
-          to="/Learn"
-          // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === '/Learn' ? 'nav-link active' : 'nav-link'}
-        >
-          Learn With Me
-        </Link>
         <Link
           to="/Resume"
           // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
