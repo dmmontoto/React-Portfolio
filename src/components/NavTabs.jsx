@@ -40,13 +40,12 @@ function NavTabs() {
         </Link>
             <NavDropdown title="Experience & Extracurriculars" id="basic-nav-dropdown">
               <NavDropdown.Item href="../Contact">NASA Mars Imaging</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.2">
+                5g Raspberry Pi
+              </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.4">
-                Separated link
+                Rocket Data Plotter
               </NavDropdown.Item>
             </NavDropdown>
         <Link
