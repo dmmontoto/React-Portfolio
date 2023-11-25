@@ -109,7 +109,7 @@ export default function Projects() {
                 <div className='Project-Content'>
                 <h2>Book Search Engine</h2>
                   <h3>Account-Based Book Finder</h3>
-                  <h5>Javascript, Node.js, Express.js, SQL, OpenAI API, Heroku, Github</h5>
+                  <h5>Javascript, React.js, Node.js, Express.js, MongoDB, GraphQL, JSON, Google API, Heroku, Github</h5>
                   <ul id="bullets">
                     <li>Successfully modified authentication middleware to seamlessly integrate with the GraphQL API while implementing an Apollo Provider for effective communication with the Apollo Server</li>
                     <li>Utilized React for the frontend, delivering an intuitive and user-friendly interface that aligns with user expectations, implementing dynamic menu changes based on user authentication status</li>
@@ -135,7 +135,7 @@ export default function Projects() {
             <div className="col-md-6" id='Project-Container'>
               <div className='Project-Card Bottom-Card' style={{ '--clr': '#009688' }}>
                 <div className='imgBx'>
-                <img src='/src/images/GP1slidePreview.gif'></img>
+                <img src='/src/images/.gif'></img>
                 </div>
                 <div className='Project-Content'>
                 <h2>C++ Project 2</h2>
@@ -169,12 +169,12 @@ export default function Projects() {
             <div className="col-md-6" id='Project-Container'>
               <div className='Project-Card Bottom-Card' style={{ '--clr': '#009688' }}>
                 <div className="imgBx">
-                  <img src='/src/images/EazyExplorer.png'></img>
+                  <img src='/src/images/.png'></img>
                 </div>
                 <div className='Project-Content'>
                 <h2>C++ File Encrypter</h2>
                   <h3>Data Encripter</h3>
-                  <h5>Javascript, Node.js, Express.js, SQL, OpenAI API, Heroku, Github</h5>
+                  <h5>C++</h5>
                   <ul id="bullets">
                     <li>Spearheaded a collaborative effort with a team of three to develop an account-based social media platform, leveraging Artificial Intelligence to provide users with personalized vacation activity suggestions</li>
                     <li>Implemented a SQL database and followed a Module-View-Controller architectural approach, enabling users to share their travel experiences and plans while fostering engagement through interactive comments</li>
@@ -205,7 +205,7 @@ export default function Projects() {
                 <div className='Project-Content'>
                 <h2>Technology Blog</h2>
                   <h3>Account-Based Blog Site</h3>
-                  <h5>Javascript, Movie API, Recipe API, JSON, Github</h5>
+                  <h5>Javascript, Node.js, Express.js, JSON, SQL, Heroku, Github</h5>
                   <ul id="bullets">
                     <li>Developed a dynamic tech blog platform with user accounts, blog post creation, and interactive commenting features</li>
                     <li>Designed a responsive web interface using HTML, CSS, and JavaScript, ensuring a seamless user experience</li>
