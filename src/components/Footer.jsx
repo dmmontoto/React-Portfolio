@@ -60,7 +60,7 @@ function Footer() {
     return (
         <div style={contactSectionStyle}>
         <a href="https://www.linkedin.com/in/david-montoto" target="_blank" rel="noreferrer" onMouseEnter={handleLinkedInHover} onMouseLeave={handleLinkedInLeave}>
-          <img src="/src/images/LinkedIn.png" alt="LinkedIn" style={{
+          <img src="src/images/LinkedIn.png" alt="LinkedIn" style={{
             ...imageStyle,
             ...(isLinkedInHovered && imageHoverStyle),
           }}/>
