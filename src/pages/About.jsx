@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import TiltCard from '../components/tilt';  
+import TiltCard from '../components/Tilt';  
 
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
