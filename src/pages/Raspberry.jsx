@@ -1,4 +1,4 @@
-export default function Learn() {
+export default function Raspberry() {
     return (
       <div id="resume">
         <div className="iframe">

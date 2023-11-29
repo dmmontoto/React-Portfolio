@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import About from './pages/About';
 import Resume from './pages/Resume';
 import Projects from './pages/Projects';
+import Raspberry from './pages/Raspberry';
 
 // Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: '/Contact',
         element: <Contact />,
+      },
+      {
+        path: '/Raspberry',
+        element: <Raspberry />,
       },
     ],
   },

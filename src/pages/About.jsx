@@ -160,7 +160,7 @@ export default function About() {
                   <p>During my freshman year, I had the opportunity to take a Python coding course, which sparked my new-found love for coding.
                     At the start of my sophomore year, I made the pivotal decision to switch my focus from raw Applied Mathematics to Computer Science and Mathematics. 
                     The parallel between the logical constructs of mathematics and coding resonated with me deeply, and I embraced the challenge of conquering new frontiers
-                     in this ever-evolving landscape. Today, I live and breathe coding, embracing the endless learning opportunities it presents.
+                     in this ever-evolving landscape. Currently, coding is an integral part of my daily life, and I appreciate the constant learning it offers.
                   </p>
                 </div>
               </div>
