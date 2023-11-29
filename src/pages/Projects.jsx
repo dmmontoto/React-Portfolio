@@ -135,7 +135,7 @@ export default function Projects() {
             <div className="col-md-6" id='Project-Container'>
               <div className='Project-Card Bottom-Card' style={{ '--clr': '#009688' }}>
                 <div className='imgBx'>
-                <img src='/src/images/.gif'></img>
+                <img src='./assets/CPP.png'></img>
                 </div>
                 <div className='Project-Content'>
                 <h2>C++ Project 2</h2>
@@ -146,13 +146,13 @@ export default function Projects() {
                   </ul>
                   <div style={contactSectionStyle}>
                     <a href="https://marissacraig.github.io/MovieMunchies/index.html" target="_blank" rel="noreferrer" onMouseEnter={handleWebsiteHover} onMouseLeave={handleWebsiteLeave}>
-                      <img src="/src/images/WebsiteImage.png" alt="Website" style={{
+                      <img src="./assets/WebsiteImage.png" alt="Website" style={{
                       ...imageStyle,
                       ...(isWebsiteHovered && imageHoverStyle),
                       }}/>
                     </a>
                     <a href="https://github.com/marissacraig/MovieMunchies" target="_blank" rel="noreferrer" onMouseEnter={handleGitHubHover} onMouseLeave={handleGitHubLeave}>
-                    <img src="/src/images/GitLogo.png" alt="GitHub" style={{
+                    <img src="./assets/GitLogo.png" alt="GitHub" style={{
                     ...imageStyle,
                     ...(isGitHubHovered && imageHoverStyle),
                     }}/>
@@ -169,7 +169,7 @@ export default function Projects() {
             <div className="col-md-6" id='Project-Container'>
               <div className='Project-Card Bottom-Card' style={{ '--clr': '#009688' }}>
                 <div className="imgBx">
-                  <img src='/src/images/.png'></img>
+                  <img src='./assets/CPP.png'></img>
                 </div>
                 <div className='Project-Content'>
                 <h2>C++ File Encrypter</h2>
@@ -182,13 +182,13 @@ export default function Projects() {
                   </ul>
                   <div style={contactSectionStyle}>
                     <a href="https://eazy-explorer-8c2ae355679a.herokuapp.com/" target="_blank" rel="noreferrer" onMouseEnter={handleWebsiteHover} onMouseLeave={handleWebsiteLeave}>
-                      <img src="/src/images/WebsiteImage.png" alt="Website" style={{
+                      <img src="./assets/WebsiteImage.png" alt="Website" style={{
                       ...imageStyle,
                       ...(isWebsiteHovered && imageHoverStyle),
                       }}/>
                     </a>
                     <a href="https://github.com/dmmontoto/Eazy-Explorer" target="_blank" rel="noreferrer" onMouseEnter={handleGitHubHover} onMouseLeave={handleGitHubLeave}>
-                    <img src="/src/images/GitLogo.png" alt="GitHub" style={{
+                    <img src="./assets/GitLogo.png" alt="GitHub" style={{
                     ...imageStyle,
                     ...(isGitHubHovered && imageHoverStyle),
                     }}/>
@@ -200,7 +200,7 @@ export default function Projects() {
             <div className="col-md-6" id='Project-Container'>
               <div className='Project-Card Bottom-Card' style={{ '--clr': '#009688' }}>
                 <div className='imgBx'>
-                <img src='/src/images/TechBlog.png'></img>
+                <img src='./assets/TechBlog.png'></img>
                 </div>
                 <div className='Project-Content'>
                 <h2>Technology Blog</h2>
@@ -213,13 +213,13 @@ export default function Projects() {
                   </ul>
                   <div style={contactSectionStyle}>
                     <a href="https://account-based-tech-blog-30c1584537a5.herokuapp.com" target="_blank" rel="noreferrer" onMouseEnter={handleWebsiteHover} onMouseLeave={handleWebsiteLeave}>
-                      <img src="/src/images/WebsiteImage.png" alt="Website" style={{
+                      <img src="./assets/WebsiteImage.png" alt="Website" style={{
                       ...imageStyle,
                       ...(isWebsiteHovered && imageHoverStyle),
                       }}/>
                     </a>
                     <a href="https://github.com/dmmontoto/Account-Based-Tech-Blog" target="_blank" rel="noreferrer" onMouseEnter={handleGitHubHover} onMouseLeave={handleGitHubLeave}>
-                    <img src="/src/images/GitLogo.png" alt="GitHub" style={{
+                    <img src="./assets/GitLogo.png" alt="GitHub" style={{
                     ...imageStyle,
                     ...(isGitHubHovered && imageHoverStyle),
                     }}/>
@@ -236,7 +236,7 @@ export default function Projects() {
           <div className="col-md-6" id='Project-Container'>
               <div className='Project-Card Bottom-Card' style={{ '--clr': '#009688' }}>
                 <div className='imgBx'>
-                <img src='/src/images/GP1slidePreview.gif'></img>
+                <img src='./assets/GP1slidePreview.gif'></img>
                 </div>
                 <div className='Project-Content'>
                 <h2>Movie Munchies</h2>
@@ -249,13 +249,13 @@ export default function Projects() {
                   </ul>
                   <div style={contactSectionStyle}>
                     <a href="https://marissacraig.github.io/MovieMunchies/index.html" target="_blank" rel="noreferrer" onMouseEnter={handleWebsiteHover} onMouseLeave={handleWebsiteLeave}>
-                      <img src="/src/images/WebsiteImage.png" alt="Website" style={{
+                      <img src="./assets/WebsiteImage.png" alt="Website" style={{
                       ...imageStyle,
                       ...(isWebsiteHovered && imageHoverStyle),
                       }}/>
                     </a>
                     <a href="https://github.com/marissacraig/MovieMunchies" target="_blank" rel="noreferrer" onMouseEnter={handleGitHubHover} onMouseLeave={handleGitHubLeave}>
-                    <img src="/src/images/GitLogo.png" alt="GitHub" style={{
+                    <img src="./assets/GitLogo.png" alt="GitHub" style={{
                     ...imageStyle,
                     ...(isGitHubHovered && imageHoverStyle),
                     }}/>
