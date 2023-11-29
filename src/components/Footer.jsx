@@ -60,19 +60,19 @@ function Footer() {
     return (
         <div style={contactSectionStyle}>
         <a href="https://www.linkedin.com/in/david-montoto" target="_blank" rel="noreferrer" onMouseEnter={handleLinkedInHover} onMouseLeave={handleLinkedInLeave}>
-          <img src="/images/LinkedIn.png" alt="LinkedIn" style={{
+          <img src="./src/images/LinkedIn.png" alt="LinkedIn" style={{
             ...imageStyle,
             ...(isLinkedInHovered && imageHoverStyle),
           }}/>
         </a>
         <a href="https://www.github.com/dmmontoto" target="_blank" rel="noreferrer" onMouseEnter={handleGitHubHover} onMouseLeave={handleGitHubLeave}>
-          <img src="./images/GitLogo.png" alt="GitHub" style={{
+          <img src="./src/images/GitLogo.png" alt="GitHub" style={{
             ...imageStyle,
             ...(isGitHubHovered && imageHoverStyle),
           }}/>
         </a>
         <a href="https://www.instagram.com/david_montoto/" target="_blank" rel="noreferrer" onMouseEnter={handleInstagramHover} onMouseLeave={handleInstagramLeave}>
-          <img src="../images/Instagram.png" alt="Instagram" style={{
+          <img src="./src/images/Instagram.png" alt="Instagram" style={{
             ...imageStyle,
             ...(isInstagramHovered && imageHoverStyle),
           }}/>
