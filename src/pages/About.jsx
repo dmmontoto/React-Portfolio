@@ -124,7 +124,7 @@ export default function About() {
           <div className="col-md-6">
             <div className="rocket-scene">
               <div className="rocket">
-                <img className="rocket-img" src="src/images/rocket.png"/>
+                <img className="rocket-img" src="./assets/rocket.png"/>
               </div>
             </div>
           </div>

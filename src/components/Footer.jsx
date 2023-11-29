@@ -72,7 +72,7 @@ function Footer() {
           }}/>
         </a>
         <a href="https://www.instagram.com/david_montoto/" target="_blank" rel="noreferrer" onMouseEnter={handleInstagramHover} onMouseLeave={handleInstagramLeave}>
-          <img src="/assets/Instagram.png" alt="Instagram" style={{
+          <img src="./assets/Instagram.png" alt="Instagram" style={{
             ...imageStyle,
             ...(isInstagramHovered && imageHoverStyle),
           }}/>
