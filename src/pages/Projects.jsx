@@ -65,7 +65,7 @@ export default function Projects() {
                   <ul id="bullets">
                     <li>Spearheaded a collaborative effort with a team of three to develop an account-based social media platform, leveraging Artificial Intelligence to provide users with personalized vacation activity suggestions</li>
                     <li>Implemented a SQL database and followed a Module-View-Controller architectural approach, enabling users to share their travel experiences and plans while fostering engagement through interactive comments</li>
-                    <li>Utilized an account-based system that enables users to engage in discussions by posting and deleting their plans or providing feedback and comments on the vacation plans shared within the community.</li>
+                    <li>Utilized an account-based system that enables users to engage in discussions by posting and deleting their plans or providing feedback and comments on the vacation plans shared within the community</li>
                   </ul>
                   <div style={contactSectionStyle}>
                     <a href="https://eazy-explorer-8c2ae355679a.herokuapp.com/" target="_blank" rel="noreferrer" onMouseEnter={handleWebsiteHover} onMouseLeave={handleWebsiteLeave}>
@@ -93,6 +93,11 @@ export default function Projects() {
                   <h2>Tracked Fitness</h2>
                   <h3>Account-Based Fitness Tracker</h3>
                   <h5>Javascript, React.js, Node.js, Express.js, MongoDB, GraphQL, Quote API, Heroku, Github</h5>
+                  <ul id="bullets">
+                    <li>Collaborated with a team of three where I took lead in design and development of the backend infrastructure by leveraging MongoDB, Express.js, and Node.js to ensure seamless integration between frontend and backend</li>
+                    <li>Showcased problem-solving by addressing real-world challenges in the fitness domain, implementing GraphQL to enhance data handling efficiently and stay at the forefront of evolving technologies</li>
+                    <li>Contributed to an improved user experience by implementing responsive design principles, ensuring the seamless interaction of the MERN stack single-page application across various devices</li>
+                  </ul>
                   <div style={contactSectionStyle}>
                     <a href="https://tracked-fitness-49c50811533c.herokuapp.com/" target="_blank" rel="noreferrer" onMouseEnter={handleWebsiteHover} onMouseLeave={handleWebsiteLeave}>
                       <img src="./assets/WebsiteImage.png" alt="Website" style={{
@@ -123,7 +128,7 @@ export default function Projects() {
                 <div className='Project-Content'>
                 <h2>Epidemiological Graph Analysis</h2>
                   <h3>C++ API Implementation</h3>
-                  <h5></h5>
+                  <h5>C++</h5>
                   <ul id="bullets">
                     <li>Developed a C++ implementation of an undirected graph for analysis, specifically tailored for HIV and COVID-19, utilizing graph theory to perform transmission clustering, where viral sequence data is analyzed</li>
                     <li>Designed and implemented a comprehensive API for a graph class, allowing representation and manipulation, including functions for basic graph properties, shortest path calculations, and connected components identification</li>
