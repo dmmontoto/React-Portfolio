@@ -116,7 +116,7 @@ export default function Projects() {
         <div className="container">
           <div className="row">
             <div className="col-md-6" id='Project-Container'>
-              <div className='Project-Card Bottom-Card' style={{ '--clr': '#009688' }}>
+              <div className='Project-Card' style={{ '--clr': '#009688' }}>
                 <div className='imgBx'>
                 <img src='./assets/CPP.png'></img>
                 </div>
@@ -129,19 +129,19 @@ export default function Projects() {
                     <li>Designed and implemented a comprehensive API for a graph class, allowing representation and manipulation, including functions for basic graph properties, shortest path calculations, and connected components identification</li>
                     <li>Implemented advanced algorithms such as Breadth-First Search, Dijkstra’s Algorithm, and efficient threshold determination for virus transmission analysis</li>
                   </ul>
-                  <div style={contactSectionStyle}>
+                  {/* <div style={contactSectionStyle}>
                     <a href="https://github.com/marissacraig/MovieMunchies" target="_blank" rel="noreferrer" onMouseEnter={handleGitHubHover} onMouseLeave={handleGitHubLeave}>
                     <img src="./assets/GitLogo.png" alt="GitHub" style={{
                     ...imageStyle,
                     ...(isGitHubHovered && imageHoverStyle),
                     }}/>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
             <div className="col-md-6" id='Project-Container'>
-              <div className='Project-Card Bottom-Card' style={{ '--clr': '#009688' }}>
+              <div className='Project-Card' style={{ '--clr': '#009688' }}>
                 <div className="imgBx">
                   <img src='./assets/BookFinder.png'></img>
                 </div>
@@ -177,27 +177,21 @@ export default function Projects() {
         <div className="container">
           <div className="row">
             <div className="col-md-6" id='Project-Container'>
-              <div className='Project-Card Bottom-Card' style={{ '--clr': '#009688' }}>
+              <div className='Project-Card' style={{ '--clr': '#009688' }}>
                 <div className="imgBx">
                   <img src='./assets/CPP.png'></img>
                 </div>
                 <div className='Project-Content'>
-                <h2>C++ File Encrypter</h2>
-                  <h3>Data Encripter</h3>
+                <h2>Huffman File Compressor</h2>
+                  <h3>C++ File Compressor</h3>
                   <h5>C++</h5>
                   <ul id="bullets">
-                    <li>Spearheaded a collaborative effort with a team of three to develop an account-based social media platform, leveraging Artificial Intelligence to provide users with personalized vacation activity suggestions</li>
-                    <li>Implemented a SQL database and followed a Module-View-Controller architectural approach, enabling users to share their travel experiences and plans while fostering engagement through interactive comments</li>
-                    <li>Utilized an account-based system that enables users to engage in discussions by posting and deleting their plans or providing feedback and comments on the vacation plans shared within the community.</li>
+                    <li>Developed C++ programs, compress and uncompress, for efficient file compression and decompression using the Huffman algorithm</li>
+                    <li>Employed priority queues in C++ for efficiently selecting symbols with lower frequencies while implementing a Huffman Coding Tree (HCTree) facilitate the compression and uncompression processes</li>
+                    <li>Utilized a suggested control flow for both compression and uncompression, parsing command line arguments, performing file I/O operations, and ensuring the ability to compile and run the programs as specified</li>
                   </ul>
                   <div style={contactSectionStyle}>
-                    <a href="https://eazy-explorer-8c2ae355679a.herokuapp.com/" target="_blank" rel="noreferrer" onMouseEnter={handleWebsiteHover} onMouseLeave={handleWebsiteLeave}>
-                      <img src="./assets/WebsiteImage.png" alt="Website" style={{
-                      ...imageStyle,
-                      ...(isWebsiteHovered && imageHoverStyle),
-                      }}/>
-                    </a>
-                    <a href="https://github.com/dmmontoto/Eazy-Explorer" target="_blank" rel="noreferrer" onMouseEnter={handleGitHubHover} onMouseLeave={handleGitHubLeave}>
+                    <a href="https://github.com/dmmontoto/File-Compressor" target="_blank" rel="noreferrer" onMouseEnter={handleGitHubHover} onMouseLeave={handleGitHubLeave}>
                     <img src="./assets/GitLogo.png" alt="GitHub" style={{
                     ...imageStyle,
                     ...(isGitHubHovered && imageHoverStyle),
@@ -208,7 +202,7 @@ export default function Projects() {
               </div>
             </div>
             <div className="col-md-6" id='Project-Container'>
-              <div className='Project-Card Bottom-Card' style={{ '--clr': '#009688' }}>
+              <div className='Project-Card' style={{ '--clr': '#009688' }}>
                 <div className='imgBx'>
                 <img src='./assets/TechBlog.png'></img>
                 </div>
