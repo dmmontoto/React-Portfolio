@@ -56,18 +56,6 @@ export default function Projects() {
             <div className="col-md-6" id='Project-Container'>
               <div className='Project-Card'>
                 <div className='imgBx'>
-
-                </div>
-                <div className='Project-Content'>
-                  <h2>Tracked Fitness</h2>
-                  <h3>Account-Based Fitness Tracker</h3>
-                  <h5>Javascript, React.js, Node.js, Express.js, MongoDB, GraphQL, Quote API, Heroku, Github</h5>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6" id='Project-Container'>
-              <div className='Project-Card'>
-                <div className='imgBx'>
                   <img src='./assets/EazyExplorer.png'></img>
                 </div>
                 <div className='Project-Content'>
@@ -96,11 +84,62 @@ export default function Projects() {
                 </div>
               </div>
             </div>
+            <div className="col-md-6" id='Project-Container'>
+              <div className='Project-Card'>
+                <div className='imgBx'>
+                  <img src='./assets/TrackedFitness.png'></img>
+                </div>
+                <div className='Project-Content'>
+                  <h2>Tracked Fitness</h2>
+                  <h3>Account-Based Fitness Tracker</h3>
+                  <h5>Javascript, React.js, Node.js, Express.js, MongoDB, GraphQL, Quote API, Heroku, Github</h5>
+                  <div style={contactSectionStyle}>
+                    <a href="https://tracked-fitness-49c50811533c.herokuapp.com/" target="_blank" rel="noreferrer" onMouseEnter={handleWebsiteHover} onMouseLeave={handleWebsiteLeave}>
+                      <img src="./assets/WebsiteImage.png" alt="Website" style={{
+                      ...imageStyle,
+                      ...(isWebsiteHovered && imageHoverStyle),
+                      }}/>
+                    </a>
+                    <a href="https://github.com/iqwixn/tracked-fitness" target="_blank" rel="noreferrer" onMouseEnter={handleGitHubHover} onMouseLeave={handleGitHubLeave}>
+                    <img src="./assets/GitLogo.png" alt="GitHub" style={{
+                    ...imageStyle,
+                    ...(isGitHubHovered && imageHoverStyle),
+                    }}/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div className="container">
           <div className="row">
+            <div className="col-md-6" id='Project-Container'>
+              <div className='Project-Card Bottom-Card' style={{ '--clr': '#009688' }}>
+                <div className='imgBx'>
+                <img src='./assets/CPP.png'></img>
+                </div>
+                <div className='Project-Content'>
+                <h2>Epidemiological Graph Analysis</h2>
+                  <h3>C++ API Implementation</h3>
+                  <h5></h5>
+                  <ul id="bullets">
+                    <li>Developed a C++ implementation of an undirected graph for analysis, specifically tailored for HIV and COVID-19, utilizing graph theory to perform transmission clustering, where viral sequence data is analyzed</li>
+                    <li>Designed and implemented a comprehensive API for a graph class, allowing representation and manipulation, including functions for basic graph properties, shortest path calculations, and connected components identification</li>
+                    <li>Implemented advanced algorithms such as Breadth-First Search, Dijkstra’s Algorithm, and efficient threshold determination for virus transmission analysis</li>
+                  </ul>
+                  <div style={contactSectionStyle}>
+                    <a href="https://github.com/marissacraig/MovieMunchies" target="_blank" rel="noreferrer" onMouseEnter={handleGitHubHover} onMouseLeave={handleGitHubLeave}>
+                    <img src="./assets/GitLogo.png" alt="GitHub" style={{
+                    ...imageStyle,
+                    ...(isGitHubHovered && imageHoverStyle),
+                    }}/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="col-md-6" id='Project-Container'>
               <div className='Project-Card Bottom-Card' style={{ '--clr': '#009688' }}>
                 <div className="imgBx">
@@ -123,35 +162,6 @@ export default function Projects() {
                       }}/>
                     </a>
                     <a href="https://github.com/dmmontoto/Book-Search-Engine" target="_blank" rel="noreferrer" onMouseEnter={handleGitHubHover} onMouseLeave={handleGitHubLeave}>
-                    <img src="./assets/GitLogo.png" alt="GitHub" style={{
-                    ...imageStyle,
-                    ...(isGitHubHovered && imageHoverStyle),
-                    }}/>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6" id='Project-Container'>
-              <div className='Project-Card Bottom-Card' style={{ '--clr': '#009688' }}>
-                <div className='imgBx'>
-                <img src='./assets/CPP.png'></img>
-                </div>
-                <div className='Project-Content'>
-                <h2>C++ Project 2</h2>
-                  <h3>C++</h3>
-                  <h5></h5>
-                  <ul id="bullets">
-
-                  </ul>
-                  <div style={contactSectionStyle}>
-                    <a href="https://marissacraig.github.io/MovieMunchies/index.html" target="_blank" rel="noreferrer" onMouseEnter={handleWebsiteHover} onMouseLeave={handleWebsiteLeave}>
-                      <img src="./assets/WebsiteImage.png" alt="Website" style={{
-                      ...imageStyle,
-                      ...(isWebsiteHovered && imageHoverStyle),
-                      }}/>
-                    </a>
-                    <a href="https://github.com/marissacraig/MovieMunchies" target="_blank" rel="noreferrer" onMouseEnter={handleGitHubHover} onMouseLeave={handleGitHubLeave}>
                     <img src="./assets/GitLogo.png" alt="GitHub" style={{
                     ...imageStyle,
                     ...(isGitHubHovered && imageHoverStyle),
