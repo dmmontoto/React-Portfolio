@@ -38,16 +38,19 @@ function NavTabs() {
         >
           Projects
         </Link>
-            <NavDropdown title="Experience & Extracurriculars" id="basic-nav-dropdown">
-              <NavDropdown.Item href="../Contact">NASA Mars Imaging</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="../Raspberry">
-                5g Raspberry Pi
-              </NavDropdown.Item>
-              <NavDropdown.Item href="../Raspberry">
-                Rocket Data Plotter
-              </NavDropdown.Item>
-            </NavDropdown>
+        <NavDropdown title="Experience & Extracurriculars" id="basic-nav-dropdown">
+          <Link to="/NASA-Mars-Imaging" className="dropdown-item">
+            NASA Mars Imaging
+          </Link>
+          <NavDropdown.Divider />
+          <Link to="/5g-Raspberry-Pi" className="dropdown-item">
+            5g Raspberry Pi
+          </Link>
+          <Link to="/Rocket-Data-Plotter" className="dropdown-item">
+          Rocket Data Plotter
+          </Link>
+        </NavDropdown>
+
         <Link
           to="/Resume"
           // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
