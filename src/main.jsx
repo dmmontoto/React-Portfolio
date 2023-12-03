@@ -12,6 +12,7 @@ import About from './pages/About';
 import Resume from './pages/Resume';
 import Projects from './pages/Projects';
 import Raspberry from './pages/5g-Raspberry-Pi';
+import Plotter from './pages/Rocket-Data-Plotter';
 
 // Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: '/5g-Raspberry-Pi',
         element: <Raspberry />,
+      },
+      {
+        path: '/Rocket-Data-Plotter',
+        element: <Plotter />,
       },
     ],
   },
