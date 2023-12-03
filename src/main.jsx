@@ -13,6 +13,7 @@ import Resume from './pages/Resume';
 import Projects from './pages/Projects';
 import Raspberry from './pages/5g-Raspberry-Pi';
 import Plotter from './pages/Rocket-Data-Plotter';
+import Imaging from './pages/NASA-Mars-Imaging';
 
 // Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: '/Rocket-Data-Plotter',
         element: <Plotter />,
+      },
+      {
+        path: '/NASA-Mars-Imaging',
+        element: <Imaging />,
       },
     ],
   },
