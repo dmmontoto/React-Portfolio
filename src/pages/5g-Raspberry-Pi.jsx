@@ -1,23 +1,39 @@
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { Link } from 'react-router-dom';
 
 export default function Raspberry() {
     return (
-      <main id="nasa-api">
+      <main>
 
         <div id="bhaLogo">
-          <img id="bha-img" src="assets/images/BHA.png" />
+          <img id="bha-img" src="assets/BHA.png" />
         </div>
 
-        <section className="container" id="raspberry">
+        <section id="raspberry-container">
           <div id="glass-card" className="row justify-content-center align-items-center">
             <div>
               <div className="buttons d-flex justify-content-center align-items-center flex-column">
                 <h1>5g Raspberry Pi Live Stream</h1>
-                <h2>Project for Beverly Hills Aerials and T-Mobile</h2>
+                <h2>
+                Project for{' '}
+                <Link id="bha-link" to="https://www.beverlyhillsaerials.com/" style={{
+                    textDecoration: 'underline',
+                    color: 'inherit',
+                    transition: 'color 0.3s, text-shadow 0.3s',
+                    // Adding a glow effect on hover
+                    ':hover': {
+                      color: '#fff', // Change this to your desired hover color
+                      textShadow: '0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff', // Adjust the glow effect
+                    },
+                  }}>
+                  Beverly Hills Aerials
+                </Link>{' '}
+                and T-Mobile
+              </h2>
               </div>
               <div id="raspberry-images">
-                <img src="./assets/images/raspberry1.jpeg" alt="Raspberry Pi Image" />
-                <img src="./assets/images/raspberry2.jpeg" alt="Raspberry Pi Livestream" />
+                <img src="./assets/raspberry1.jpeg" alt="Raspberry Pi Image" />
+                <img src="./assets/raspberry2.jpeg" alt="Raspberry Pi Livestream" /> 
               </div>
               <div id="raspberry-bullets">
                 <ul>
