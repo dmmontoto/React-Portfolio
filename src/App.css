@@ -996,7 +996,7 @@ form button {
   background-size: cover;
   height: 100vh;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   z-index: 0;
 }
 

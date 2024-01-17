@@ -134,14 +134,14 @@ export default function Projects() {
                     <li>Designed and implemented a comprehensive API for a graph class, allowing representation and manipulation, including functions for basic graph properties, shortest path calculations, and connected components identification</li>
                     <li>Implemented advanced algorithms such as Breadth-First Search, Dijkstra’s Algorithm, and efficient threshold determination for virus transmission analysis</li>
                   </ul>
-                  {/* <div style={contactSectionStyle}>
-                    <a href="https://github.com/marissacraig/MovieMunchies" target="_blank" rel="noreferrer" onMouseEnter={handleGitHubHover} onMouseLeave={handleGitHubLeave}>
+                  <div style={contactSectionStyle}>
+                    <a href="https://github.com/dmmontoto/Epidemiological-Graph-Analysis" target="_blank" rel="noreferrer" onMouseEnter={handleGitHubHover} onMouseLeave={handleGitHubLeave}>
                     <img src="./assets/GitLogo.png" alt="GitHub" style={{
                     ...imageStyle,
                     ...(isGitHubHovered && imageHoverStyle),
                     }}/>
                     </a>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </div>
