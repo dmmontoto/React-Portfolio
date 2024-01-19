@@ -8,6 +8,7 @@
 
 #root {
   text-align: center;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 body {
@@ -20,14 +21,19 @@ body {
 
 /* NAV */
 
+.NavTitle {
+  font-size: 30px;
+}
+
 .bg-secondary {
   background-color: var(--main-blue) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+  font-size: 20px;
 }
 
-.me-auto {
+.ms-auto {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;

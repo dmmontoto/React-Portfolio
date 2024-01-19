@@ -12,10 +12,10 @@ function NavTabs() {
   return (
     <Navbar expand="lg" className="bg-secondary">
       <Container>
-        <Navbar.Brand href="#home">David Montoto</Navbar.Brand>
+        <Navbar.Brand className='NavTitle' href="#home">David Montoto</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="ms-auto">
           <Link
           to="/"
           // This is a conditional (ternary) operator that checks to see if the current page is "Home"
