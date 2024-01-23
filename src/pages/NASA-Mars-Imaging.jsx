@@ -13,6 +13,19 @@ export default function Imaging() {
 
   let active = "";
 
+  const [cameraOptions, setCameraOptions] = useState([
+    { id: 'FHAZ', value: 'Front Hazard Avoidance Camera' },
+    { id: 'RHAZ', value: 'Rear Hazard Avoidance Camera' },
+    { id: 'MAST', value: 'Mast Camera' },
+    { id: 'CHEMCAM', value: 'Chemistry and Camera Complex' },
+    { id: 'MAHLI', value: 'Mars Hand Lens Imager' },
+    { id: 'MARDI', value: 'Mars Descent Imager' },
+    { id: 'NAVCAM', value: 'Navigation Camera' },
+    { id: 'PANCAM', value: 'Panoramic Camera'},
+    { id: 'MTES', value: 'Miniature Thermal Emission Spectrometer'}
+  ]);
+
+
   const handleCuriosityClick = () => {
     setSearchTitle("Curiosity");
     setSearchDescription("For the Curiosity rover, images are available starting from August 6th, 2012. The newest available images can be found three to four days prior to the current date.");
@@ -23,6 +36,20 @@ export default function Imaging() {
     }
 
     active = "Curiosity";
+
+    // Filter camera options based on the selected rover
+    const curiosityCameras = [
+      { id: 'FHAZ', value: 'Front Hazard Avoidance Camera' },
+      { id: 'RHAZ', value: 'Rear Hazard Avoidance Camera' },
+      { id: 'MAST', value: 'Mast Camera' },
+      { id: 'CHEMCAM', value: 'Chemistry and Camera Complex' },
+      { id: 'MAHLI', value: 'Mars Hand Lens Imager' },
+      { id: 'MARDI', value: 'Mars Descent Imager' },
+      { id: 'NAVCAM', value: 'Navigation Camera' },
+    ];
+    
+    // Update the state with the filtered camera options
+    setCameraOptions(curiosityCameras);
   };
 
   return (
@@ -62,15 +89,9 @@ export default function Imaging() {
                 onChange={(e) => setSelectedCamera(e.target.value)}
               />
               <datalist id="cameras">
-                <option value="Front Hazard Avoidance Camera"/>
-                <option value="Rear Hazard Avoidance Camera"/>
-                <option value="Mast Camera"/>
-                <option value="Chemistry and Camera Complex"/>
-                <option value="Mars Hand Lens Imager"/>
-                <option value="Mars Descent Imager"/>
-                <option value="Navigation Camera"/>
-                <option value="Panoramic Camera"/>
-                <option value="Miniature Thermal Emission Spectrometer"/>
+                {cameraOptions.map((option) => (
+                <option key={option.id} value={option.value} />
+                ))}
               </datalist>
             </div>
             <h3 id="search-alert">{searchAlert}</h3>
