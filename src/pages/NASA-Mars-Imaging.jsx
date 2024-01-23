@@ -3,43 +3,41 @@ import React, { useState, useEffect } from 'react';
 
 
 export default function Imaging() {
-  const [datePattern, setDatePattern] = useState('');
-  const [active, setActive] = useState('');
-  const [searchTitle, setSearchTitle] = useState('');
-  const [searchDescription, setSearchDescription] = useState('');
-  const [selectedCamera, setSelectedCamera] = useState('');
-  const [searchAlert, setSearchAlert] = useState('');
-  const [responseTitle, setResponseTitle] = useState('');
-  const [roverDescription, setRoverDescription] = useState('');
-  const [youtubeIframeSrc, setYoutubeIframeSrc] = useState('');
-  const [cameraOptions, setCameraOptions] = useState([]);
+  let searchTitle = "";
+  let searchDescription = "";
+  let selectedCamera = "";
+  let searchAlert = "";
+  let responseTitle = "";
+  let roverDescription = "";
+  let youtubeIframeSrc = "";
 
   return (
+
     <main id="nasa-api">
       <div className="mars-background"></div>
   
       <div id="nasaLogo">
-        <img id="nasa-img" src="assets/images/NASA.png" alt="NASA Logo" />
+        <img id="nasa-img" src="assets/NASA.png" alt="NASA Logo" />
       </div>
   
       <section className="container justify-content-center align-items-center">
         <div id="search" className="row justify-content-center align-items-center">
           <div className="col-lg-8 col-md-10 col-sm-12">
             <div className="buttons d-flex justify-content-center flex-lg-row flex-column">
-              <button onClick={() => handleRoverButtonClick('curiosity', '2012-08-06', curiosityCameras)} className={`btn btn-primary ${active === 'curiosity' ? 'active' : ''}`}>
+              <button className={`btn btn-primary`}>
                 Curiosity
               </button>
-              <button onClick={() => handleRoverButtonClick('spirit', '2004-01-08', spiritCameras)} className={`btn btn-primary ${active === 'spirit' ? 'active' : ''}`}>
+              <button className={`btn btn-primary`}>
                 Spirit
               </button>
-              <button onClick={() => handleRoverButtonClick('opportunity', '2004-01-26', opportunityCameras)} className={`btn btn-primary ${active === 'opportunity' ? 'active' : ''}`}>
+              <button className={`btn btn-primary`}>
                 Opportunity
               </button>
             </div>
             <h2 id="search-title" className="text-center">{searchTitle}</h2>
             <p id="search-description" className="text-center">{searchDescription}</p>
             <div id="selectors" className="d-flex flex-wrap justify-content-center align-items-center">
-              <input type="date" id="date-pattern" className="form-control me-2 mb-2" value={datePattern} onChange={(e) => setDatePattern(e.target.value)} />
+              <input type="date" id="date-pattern" className="form-control me-2 mb-2" />
               <input
                 id="rover-camera-input"
                 list="cameras"
@@ -50,14 +48,20 @@ export default function Imaging() {
                 onChange={(e) => setSelectedCamera(e.target.value)}
               />
               <datalist id="cameras">
-                {cameraOptions.map((option) => (
-                  <option key={option.id} value={option.value} />
-                ))}
+                <option value="Front Hazard Avoidance Camera"/>
+                <option value="Rear Hazard Avoidance Camera"/>
+                <option value="Mast Camera"/>
+                <option value="Chemistry and Camera Complex"/>
+                <option value="Mars Hand Lens Imager"/>
+                <option value="Mars Descent Imager"/>
+                <option value="Navigation Camera"/>
+                <option value="Panoramic Camera"/>
+                <option value="Miniature Thermal Emission Spectrometer"/>
               </datalist>
             </div>
             <h3 id="search-alert">{searchAlert}</h3>
             <div id="selectors" className="d-flex flex-wrap justify-content-center align-items-center">
-              <button onClick={handleSearchButtonClick} className="btn btn-primary">
+              <button className="btn btn-primary">
                 Search
               </button>
             </div>

@@ -30,7 +30,7 @@ body {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .ms-auto {
@@ -994,7 +994,7 @@ form button {
 
 /* NASA */
 
-.mars-background {
+#nasa-api {
   background: url("../public/assets/mars.jpg") no-repeat center center fixed;
   -webkit-background-size: 100%;
   -moz-background-size: cover;
