@@ -44,7 +44,7 @@ export default function Imaging() {
       datePatternInput.value = "2012-08-06";
     }
 
-    setActive('Curiosity');
+    setActive('curiosity');
 
     // Filter camera options based on the selected rover
     const curiosityCameras = [
@@ -72,7 +72,7 @@ export default function Imaging() {
       datePatternInput.value = "2004-01-08";
     }
 
-    setActive('Spirit');
+    setActive('spirit');
 
     // Filter camera options based on the selected rover
     const SpiritCameras = [
@@ -98,7 +98,7 @@ export default function Imaging() {
       datePatternInput.value = "2004-01-26";
     }
 
-    setActive('Opportunity');
+    setActive('opportunity');
 
     // Filter camera options based on the selected rover
     const opportunityCameras = [
@@ -172,7 +172,7 @@ export default function Imaging() {
   }
 
   switch(active) {
-    case "Curiosity":
+    case "curiosity":
         if (parsedYear < 2012) {
           setSearchAlert('Invalid date: Too early for the Curiosity rover');
           return;
@@ -188,7 +188,7 @@ export default function Imaging() {
         } else {
           break;
         }  
-    case "Spirit":
+    case "spirit":
         if (parsedYear < 2004) {
           setSearchAlert('Invalid date: Too early for the Spirit rover');
           return;
@@ -210,7 +210,7 @@ export default function Imaging() {
         } else {
           break;
         }
-    case "Opportunity":
+    case "opportunity":
         if (parsedYear < 2004) {
           setSearchAlert('Invalid date: Too early for the Opportunity rover');
           return;
@@ -237,7 +237,39 @@ export default function Imaging() {
 };
 
 const roverSearch = (dateParam, active, camParam) => {
-  
+  switch(active) {
+    case "curiosity":
+      setResponseTitle('Curiosity');
+      setRoverDescription(
+        <>
+          The <a href="https://mars.nasa.gov/msl/home/"><span>Curiosity</span></a> rover,
+          also known as the Mars Science Laboratory (MSL), is a car-sized rover designed to explore Mars. Launched by NASA on November 26, 2011, and successfully
+          landed on Mars on August 6, 2012, Curiosity's primary goal is to study the Martian climate and geology to assess whether the planet could have ever
+          supported microbial life. It has made remarkable discoveries, including finding evidence of ancient riverbeds and confirming the presence of water in the
+          planet's past. Curiosity continues to investigate Mars' surface, sending back valuable data and images that contribute to our understanding of the
+          Red Planet's history and potential habitability.
+        </>
+      );
+      setYoutubeIframeSrc("https://www.youtube.com/embed/xtDpWGF16po?si=A52tsFI-htn2MXig");
+      break;
+    case "spirit":
+      setResponseTitle('Spirit');
+      setRoverDescription(`The [Spirit](https://solarsystem.nasa.gov/missions/spirit/in-depth/) rover was a vital part of NASA's Mars Exploration Rover mission. It landed on Mars on January 4, 2004, with a mission focused on studying the planet's geology and searching for signs of past water activity. Designed for a 90-day mission, Spirit far exceeded expectations and operated for over six years, providing valuable insights into the Martian environment. The rover helped identify the presence of volcanic rocks, ancient river channels, and evidence of past water flows. Although its mission ended in 2010 after getting stuck in sand, Spirit's legacy continues to contribute to our understanding of the Red Planet's history and geology.`);
+      setYoutubeIframeSrc("https://www.youtube.com/embed/UTocjTbLUXs?si=_puVGd1Tk-BuGoYR");
+      break;
+    case "opportunity":
+      setResponseTitle('Opportunity');
+      setRoverDescription(`The [Opportunity](https://solarsystem.nasa.gov/missions/opportunity/in-depth/) rover was a remarkable part of NASA's Mars Exploration Rover mission. Touching down on Mars on January 25, 2004, Opportunity exceeded all expectations by continuing its mission for nearly 15 years. Its exploration of the Martian surface provided invaluable insights into the planet's history and geology. Opportunity's discoveries included evidence of past water on Mars and geological features that suggested a watery environment in the planet's past. The rover's remarkable longevity and the scientific data it gathered significantly expanded our understanding of Mars and its potential for past habitability.`);
+      setYoutubeIframeSrc("https://www.youtube.com/embed/1Ll-VHYxWXU?si=xdCc8js3Z_DyGtMI");
+      break;
+  }
+
+  const nasaApiKey = '2QbpLQBozt59EwMHuzZseMAHas7Z9Q6X2gVu7UFm';
+    const apiUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/${active}/photos?earth_date=${dateParam}&camera=${camParam}&api_key=${nasaApiKey}&per_page=6`;
+
+    // fetch(apiUrl)
+    // .then(response => response.json())
+    // .then(data => {
 };
 
   return (
