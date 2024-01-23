@@ -1,15 +1,29 @@
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 
 export default function Imaging() {
-  let searchTitle = "";
-  let searchDescription = "";
+  const [searchTitle, setSearchTitle] = useState('');
+  const [searchDescription, setSearchDescription] = useState('');
   let selectedCamera = "";
   let searchAlert = "";
   let responseTitle = "";
   let roverDescription = "";
   let youtubeIframeSrc = "";
+
+  let active = "";
+
+  const handleCuriosityClick = () => {
+    setSearchTitle("Curiosity");
+    setSearchDescription("For the Curiosity rover, images are available starting from August 6th, 2012. The newest available images can be found three to four days prior to the current date.");
+
+    const datePatternInput = document.getElementById('date-pattern');
+    if (datePatternInput) {
+      datePatternInput.value = "2012-08-06";
+    }
+
+    active = "Curiosity";
+  };
 
   return (
 
@@ -24,7 +38,7 @@ export default function Imaging() {
         <div id="search" className="row justify-content-center align-items-center">
           <div className="col-lg-8 col-md-10 col-sm-12">
             <div className="buttons d-flex justify-content-center flex-lg-row flex-column">
-              <button className={`btn btn-primary`}>
+              <button className={`btn btn-primary`} onClick={handleCuriosityClick}>
                 Curiosity
               </button>
               <button className={`btn btn-primary`}>
