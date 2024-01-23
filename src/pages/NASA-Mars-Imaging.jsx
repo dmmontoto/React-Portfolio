@@ -3,6 +3,15 @@ import { useState } from 'react';
 
 
 export default function Imaging() {
+  let date = new Date();
+  let year = date.getFullYear();
+  let month = (date.getMonth()+1).toString();
+  if (month.length === 1) {
+      month = '0' + month;
+  }
+  let today = String(date.getDate()).padStart(2,'0');
+  const datePattern = `${year}-${month}-${today}`;
+
   const [searchTitle, setSearchTitle] = useState('');
   const [searchDescription, setSearchDescription] = useState('');
   const [selectedCamera, setSelectedCamera] = useState('');
@@ -21,7 +30,7 @@ export default function Imaging() {
     { id: 'MARDI', value: 'Mars Descent Imager' },
     { id: 'NAVCAM', value: 'Navigation Camera' },
     { id: 'PANCAM', value: 'Panoramic Camera'},
-    { id: 'MTES', value: 'Miniature Thermal Emission Spectrometer'}
+    { id: 'MINITES', value: 'Miniature Thermal Emission Spectrometer'}
   ]);
 
 
@@ -71,7 +80,7 @@ export default function Imaging() {
       { id: 'RHAZ', value: 'Rear Hazard Avoidance Camera' },
       { id: 'NAVCAM', value: 'Navigation Camera' },
       { id: 'PANCAM', value: 'Panoramic Camera'},
-      { id: 'MTES', value: 'Miniature Thermal Emission Spectrometer'}
+      { id: 'MINITES', value: 'Miniature Thermal Emission Spectrometer'}
     ];
     
     // Update the state with the filtered camera options
@@ -97,7 +106,7 @@ export default function Imaging() {
       { id: 'RHAZ', value: 'Rear Hazard Avoidance Camera' },
       { id: 'NAVCAM', value: 'Navigation Camera' },
       { id: 'PANCAM', value: 'Panoramic Camera'},
-      { id: 'MTES', value: 'Miniature Thermal Emission Spectrometer'}
+      { id: 'MINITES', value: 'Miniature Thermal Emission Spectrometer'}
     ];
     
     // Update the state with the filtered camera options
@@ -112,11 +121,124 @@ export default function Imaging() {
   };
 
   const apiSearch = () => {
+    setSearchAlert('');
     if (active == '') {
       setSearchAlert("Please select a Mars Rover, date, and camera before clicking search.");
       clearResponse();
     }
-  };
+
+    const dateParam = document.getElementById("date-pattern").value;
+    const [year, month, day] = dateParam.split('-');
+    const parsedYear = parseInt(year);
+    const parsedMonth = parseInt(month);
+    const parsedDay = parseInt(day);
+
+    if(!parsedYear || !parsedYear || !parsedDay) {
+      return;
+  }
+
+  let camParam;
+  switch (selectedCamera) {
+    case "Front Hazard Avoidance Camera":
+      camParam = 'FHAZ';
+      break;
+    case "Rear Hazard Avoidance Camera":
+      camParam = 'RHAZ';
+      break;
+    case "Mast Camera":
+      camParam = 'MAST';
+      break;
+    case "Chemistry and Camera Complex":
+      camParam = 'CHEMCAM';
+      break;
+    case "Mars Hand Lens Imager":
+      camParam = 'MAHLI';
+      break;
+    case "Mars Descent Imager":
+      camParam = 'MARDI';
+      break;
+    case "Navigation Camera":
+      camParam = 'NAVCAM';
+      break;
+    case "Panoramic Camera":
+      camParam = 'PANCAM';
+      break;
+    case "Miniature Thermal Emission Spectrometer":
+      camParam = 'MINITES';
+      break;
+    default:
+      setSearchAlert('Please select a camera');
+      return;
+  }
+
+  switch(active) {
+    case "Curiosity":
+        if (parsedYear < 2012) {
+          setSearchAlert('Invalid date: Too early for the Curiosity rover');
+          return;
+        } else if (parsedYear === 2012 && parsedMonth < 8) {
+          setSearchAlert('Invalid date: Too early for the Curiosity rover');
+          return;
+        } else if (parsedYear === 2012 && parsedMonth === 8 && parsedDay < 6) {
+           setSearchAlert('Invalid date: Too early for the Curiosity rover');
+          return;
+        } else if (parsedYear === new Date().getFullYear() && parsedMonth === new Date().getMonth() + 1 && parsedDay > new Date().getDate() - 3) {
+          setSearchAlert('Invalid date: Too close to today');
+          return;
+        } else {
+          break;
+        }  
+    case "Spirit":
+        if (parsedYear < 2004) {
+          setSearchAlert('Invalid date: Too early for the Spirit rover');
+          return;
+        } else if (parsedYear === 2004 && parsedMonth < 1) {
+          setSearchAlert('Invalid date: Too early for the Spirit rover');
+          return;
+        } else if (parsedYear === 2004 && parsedMonth === 1 && parsedDay < 5) {
+          setSearchAlert('Invalid date: Too early for the Spirit rover');
+          return;
+        } else if (parsedYear > 2010) {
+          setSearchAlert('Invalid date: Last available date is January 10th, 2010');
+          return;
+        } else if (parsedYear === 2010 && parsedMonth > 1) {
+          setSearchAlert('Invalid date: Last available date is January 10th, 2010');
+          return;
+        } else if (parsedYear === 2010 && parsedMonth === 1 && parsedDay > 10) {
+          setSearchAlert('Invalid date: Last available date is January 10th, 2010');
+          return;
+        } else {
+          break;
+        }
+    case "Opportunity":
+        if (parsedYear < 2004) {
+          setSearchAlert('Invalid date: Too early for the Opportunity rover');
+          return;
+        } else if (parsedYear === 2004 && parsedMonth < 1) {
+          setSearchAlert('Invalid date: Too early for the Opportunity rover');
+          return;
+        } else if (parsedYear === 2004 && parsedMonth === 1 && parsedDay < 29) {
+          setSearchAlert('Invalid date: Too early for the Opportunity rover');
+          return;
+        } else if (parsedYear > 2017) {
+          setSearchAlert('Invalid date: Last available date is June 11th, 2017');
+          return;
+        } else if (parsedYear === 2017 && parsedMonth > 6) {
+          setSearchAlert('Invalid date: Last available date is June 11th, 2017');
+          return;
+        } else if (parsedYear === 2017 && parsedMonth === 6 && parsedDay > 11) {
+          setSearchAlert('Invalid date: Last available date is June 11th, 2017');
+          return;
+        } else {
+          break;
+        }
+  }
+  roverSearch(dateParam, active, camParam);
+};
+
+const roverSearch = (dateParam, active, camParam) => {
+  
+};
 
   return (
 
