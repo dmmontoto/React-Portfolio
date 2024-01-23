@@ -6,12 +6,11 @@ export default function Imaging() {
   const [searchTitle, setSearchTitle] = useState('');
   const [searchDescription, setSearchDescription] = useState('');
   const [selectedCamera, setSelectedCamera] = useState('');
-  let searchAlert = "";
-  let responseTitle = "";
-  let roverDescription = "";
-  let youtubeIframeSrc = "";
-
-  let active = "";
+  const [searchAlert, setSearchAlert] = useState('');
+  const [responseTitle, setResponseTitle] = useState('');
+  const [roverDescription, setRoverDescription] = useState('');
+  const [youtubeIframeSrc, setYoutubeIframeSrc] = useState('');
+  const [active, setActive] = useState('');
 
   const [cameraOptions, setCameraOptions] = useState([
     { id: 'FHAZ', value: 'Front Hazard Avoidance Camera' },
@@ -29,13 +28,14 @@ export default function Imaging() {
   const handleCuriosityClick = () => {
     setSearchTitle("Search Curiosity Images");
     setSearchDescription("For the Curiosity rover, images are available starting from August 6th, 2012. The newest available images can be found three to four days prior to the current date.");
+    setSearchAlert('');
 
     const datePatternInput = document.getElementById('date-pattern');
     if (datePatternInput) {
       datePatternInput.value = "2012-08-06";
     }
 
-    active = "Curiosity";
+    setActive('Curiosity');
 
     // Filter camera options based on the selected rover
     const curiosityCameras = [
@@ -56,13 +56,14 @@ export default function Imaging() {
   const handleSpiritClick = () => {
     setSearchTitle("Search Spirit Images");
     setSearchDescription("For the Spirit rover, images are available between the dates of January 8th, 2004 to January 10th, 2010.");
+    setSearchAlert('');
 
     const datePatternInput = document.getElementById('date-pattern');
     if (datePatternInput) {
       datePatternInput.value = "2004-01-08";
     }
 
-    active = "Spirit";
+    setActive('Spirit');
 
     // Filter camera options based on the selected rover
     const SpiritCameras = [
@@ -81,13 +82,14 @@ export default function Imaging() {
   const handleOpportunityClick = () => {
     setSearchTitle("Search Opportunity Images");
     setSearchDescription("For the Opportunity rover, images are available between the dates of January 26th, 2004 to June 11th, 2017.");
+    setSearchAlert('');
 
     const datePatternInput = document.getElementById('date-pattern');
     if (datePatternInput) {
       datePatternInput.value = "2004-01-26";
     }
 
-    active = "Opportunity";
+    setActive('Opportunity');
 
     // Filter camera options based on the selected rover
     const opportunityCameras = [
@@ -101,6 +103,19 @@ export default function Imaging() {
     // Update the state with the filtered camera options
     setCameraOptions(opportunityCameras);
     setSelectedCamera('');
+  };
+
+  const clearResponse = () => {
+    setResponseTitle('');
+    setRoverDescription('');
+    setYoutubeIframeSrc('');
+  };
+
+  const apiSearch = () => {
+    if (active == '') {
+      setSearchAlert("Please select a Mars Rover, date, and camera before clicking search.");
+      clearResponse();
+    }
   };
 
   return (
@@ -146,8 +161,8 @@ export default function Imaging() {
               </datalist>
             </div>
             <h3 id="search-alert">{searchAlert}</h3>
-            <div id="selectors" className="d-flex flex-wrap justify-content-center align-items-center">
-              <button className="btn btn-primary">
+            <div id="buttons" className="d-flex flex-wrap justify-content-center align-items-center">
+              <button className="btn btn-primary" onClick={apiSearch}>
                 Search
               </button>
             </div>
