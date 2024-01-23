@@ -5,7 +5,7 @@ import { useState } from 'react';
 export default function Imaging() {
   const [searchTitle, setSearchTitle] = useState('');
   const [searchDescription, setSearchDescription] = useState('');
-  let selectedCamera = "";
+  const [selectedCamera, setSelectedCamera] = useState('');
   let searchAlert = "";
   let responseTitle = "";
   let roverDescription = "";
@@ -50,6 +50,7 @@ export default function Imaging() {
     
     // Update the state with the filtered camera options
     setCameraOptions(curiosityCameras);
+    setSelectedCamera('');
   };
 
   const handleSpiritClick = () => {
@@ -74,6 +75,7 @@ export default function Imaging() {
     
     // Update the state with the filtered camera options
     setCameraOptions(SpiritCameras);
+    setSelectedCamera('');
   };
 
   const handleOpportunityClick = () => {
@@ -98,6 +100,7 @@ export default function Imaging() {
     
     // Update the state with the filtered camera options
     setCameraOptions(opportunityCameras);
+    setSelectedCamera('');
   };
 
   return (
