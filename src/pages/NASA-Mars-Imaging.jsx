@@ -27,7 +27,7 @@ export default function Imaging() {
 
 
   const handleCuriosityClick = () => {
-    setSearchTitle("Curiosity");
+    setSearchTitle("Search Curiosity Images");
     setSearchDescription("For the Curiosity rover, images are available starting from August 6th, 2012. The newest available images can be found three to four days prior to the current date.");
 
     const datePatternInput = document.getElementById('date-pattern');
@@ -52,6 +52,54 @@ export default function Imaging() {
     setCameraOptions(curiosityCameras);
   };
 
+  const handleSpiritClick = () => {
+    setSearchTitle("Search Spirit Images");
+    setSearchDescription("For the Spirit rover, images are available between the dates of January 8th, 2004 to January 10th, 2010.");
+
+    const datePatternInput = document.getElementById('date-pattern');
+    if (datePatternInput) {
+      datePatternInput.value = "2004-01-08";
+    }
+
+    active = "Spirit";
+
+    // Filter camera options based on the selected rover
+    const SpiritCameras = [
+      { id: 'FHAZ', value: 'Front Hazard Avoidance Camera' },
+      { id: 'RHAZ', value: 'Rear Hazard Avoidance Camera' },
+      { id: 'NAVCAM', value: 'Navigation Camera' },
+      { id: 'PANCAM', value: 'Panoramic Camera'},
+      { id: 'MTES', value: 'Miniature Thermal Emission Spectrometer'}
+    ];
+    
+    // Update the state with the filtered camera options
+    setCameraOptions(SpiritCameras);
+  };
+
+  const handleOpportunityClick = () => {
+    setSearchTitle("Search Opportunity Images");
+    setSearchDescription("For the Opportunity rover, images are available between the dates of January 26th, 2004 to June 11th, 2017.");
+
+    const datePatternInput = document.getElementById('date-pattern');
+    if (datePatternInput) {
+      datePatternInput.value = "2004-01-26";
+    }
+
+    active = "Opportunity";
+
+    // Filter camera options based on the selected rover
+    const opportunityCameras = [
+      { id: 'FHAZ', value: 'Front Hazard Avoidance Camera' },
+      { id: 'RHAZ', value: 'Rear Hazard Avoidance Camera' },
+      { id: 'NAVCAM', value: 'Navigation Camera' },
+      { id: 'PANCAM', value: 'Panoramic Camera'},
+      { id: 'MTES', value: 'Miniature Thermal Emission Spectrometer'}
+    ];
+    
+    // Update the state with the filtered camera options
+    setCameraOptions(opportunityCameras);
+  };
+
   return (
 
     <main id="nasa-api">
@@ -68,10 +116,10 @@ export default function Imaging() {
               <button className={`btn btn-primary`} onClick={handleCuriosityClick}>
                 Curiosity
               </button>
-              <button className={`btn btn-primary`}>
+              <button className={`btn btn-primary`} onClick={handleSpiritClick}>
                 Spirit
               </button>
-              <button className={`btn btn-primary`}>
+              <button className={`btn btn-primary`} onClick={handleOpportunityClick}>
                 Opportunity
               </button>
             </div>
