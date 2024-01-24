@@ -90,12 +90,12 @@ export default function Imaging() {
 
   const handleOpportunityClick = () => {
     setSearchTitle("Search Opportunity Images");
-    setSearchDescription("For the Opportunity rover, images are available between the dates of January 26th, 2004 to June 11th, 2017.");
+    setSearchDescription("For the Opportunity rover, images are available between the dates of January 29th, 2004 to June 11th, 2017.");
     setSearchAlert('');
 
     const datePatternInput = document.getElementById('date-pattern');
     if (datePatternInput) {
-      datePatternInput.value = "2004-01-26";
+      datePatternInput.value = "2004-01-29";
     }
 
     setActive('opportunity');
@@ -254,12 +254,28 @@ const roverSearch = (dateParam, active, camParam) => {
       break;
     case "spirit":
       setResponseTitle('Spirit');
-      setRoverDescription(`The [Spirit](https://solarsystem.nasa.gov/missions/spirit/in-depth/) rover was a vital part of NASA's Mars Exploration Rover mission. It landed on Mars on January 4, 2004, with a mission focused on studying the planet's geology and searching for signs of past water activity. Designed for a 90-day mission, Spirit far exceeded expectations and operated for over six years, providing valuable insights into the Martian environment. The rover helped identify the presence of volcanic rocks, ancient river channels, and evidence of past water flows. Although its mission ended in 2010 after getting stuck in sand, Spirit's legacy continues to contribute to our understanding of the Red Planet's history and geology.`);
+      setRoverDescription(
+        <>
+          The <a href="https://solarsystem.nasa.gov/missions/spirit/in-depth/"><span>Spirit</span></a> 
+            rover was a vital part of NASA's Mars Exploration Rover mission. It landed on Mars on January 4, 2004, with a mission focused on studying the planet's geology 
+            and searching for signs of past water activity. Designed for a 90-day mission, Spirit far exceeded expectations and operated for over six years, providing valuable 
+            insights into the Martian environment. The rover helped identify the presence of volcanic rocks, ancient river channels, and evidence of past water flows. Although 
+            its mission ended in 2010 after getting stuck in sand, Spirit's legacy continues to contribute to our understanding of the Red Planet's history and geology.
+        </>
+      )
       setYoutubeIframeSrc("https://www.youtube.com/embed/UTocjTbLUXs?si=_puVGd1Tk-BuGoYR");
       break;
     case "opportunity":
       setResponseTitle('Opportunity');
-      setRoverDescription(`The [Opportunity](https://solarsystem.nasa.gov/missions/opportunity/in-depth/) rover was a remarkable part of NASA's Mars Exploration Rover mission. Touching down on Mars on January 25, 2004, Opportunity exceeded all expectations by continuing its mission for nearly 15 years. Its exploration of the Martian surface provided invaluable insights into the planet's history and geology. Opportunity's discoveries included evidence of past water on Mars and geological features that suggested a watery environment in the planet's past. The rover's remarkable longevity and the scientific data it gathered significantly expanded our understanding of Mars and its potential for past habitability.`);
+      setRoverDescription(
+        <>
+          The <a href="https://solarsystem.nasa.gov/missions/opportunity/in-depth/"><span>Opportunity</span></a> 
+            rover was a remarkable part of NASA's Mars Exploration Rover mission. Touching down on Mars on January 25, 2004, Opportunity exceeded all expectations by continuing 
+            its mission for nearly 15 years. Its exploration of the Martian surface provided invaluable insights into the planet's history and geology. Opportunity's discoveries 
+            included evidence of past water on Mars and geological features that suggested a watery environment in the planet's past. The rover's remarkable longevity and the scientific 
+            data it gathered significantly expanded our understanding of Mars and its potential for past habitability.
+        </>
+      )
       setYoutubeIframeSrc("https://www.youtube.com/embed/1Ll-VHYxWXU?si=xdCc8js3Z_DyGtMI");
       break;
   }
