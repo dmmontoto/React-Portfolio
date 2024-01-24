@@ -36,7 +36,7 @@ export default function Imaging() {
 
   const handleCuriosityClick = () => {
     setSearchTitle("Search Curiosity Images");
-    setSearchDescription("For the Curiosity rover, images are available starting from August 6th, 2012. The newest available images can be found three to four days prior to the current date.");
+    setSearchDescription("For the Curiosity rover, images are available starting from August 6th, 2012. The newest available images can be found three to four days prior to the current date. Some days will not have images taken.");
     setSearchAlert('');
 
     const datePatternInput = document.getElementById('date-pattern');
@@ -64,7 +64,7 @@ export default function Imaging() {
 
   const handleSpiritClick = () => {
     setSearchTitle("Search Spirit Images");
-    setSearchDescription("For the Spirit rover, images are available between the dates of January 8th, 2004 to January 10th, 2010.");
+    setSearchDescription("For the Spirit rover, images are available between the dates of January 8th, 2004 to January 10th, 2010. Some days will not have images taken.");
     setSearchAlert('');
 
     const datePatternInput = document.getElementById('date-pattern');
@@ -90,7 +90,7 @@ export default function Imaging() {
 
   const handleOpportunityClick = () => {
     setSearchTitle("Search Opportunity Images");
-    setSearchDescription("For the Opportunity rover, images are available between the dates of January 29th, 2004 to June 11th, 2017.");
+    setSearchDescription("For the Opportunity rover, images are available between the dates of January 29th, 2004 to June 11th, 2017. Some days will not have images taken.");
     setSearchAlert('');
 
     const datePatternInput = document.getElementById('date-pattern');
@@ -256,8 +256,8 @@ const roverSearch = (dateParam, active, camParam) => {
       setResponseTitle('Spirit');
       setRoverDescription(
         <>
-          The <a href="https://solarsystem.nasa.gov/missions/spirit/in-depth/"><span>Spirit</span></a> 
-            rover was a vital part of NASA's Mars Exploration Rover mission. It landed on Mars on January 4, 2004, with a mission focused on studying the planet's geology 
+          The <a href="https://solarsystem.nasa.gov/missions/spirit/in-depth/"><span>Spirit</span></a> rover was a vital part of NASA's Mars Exploration Rover mission. 
+            It landed on Mars on January 4, 2004, with a mission focused on studying the planet's geology 
             and searching for signs of past water activity. Designed for a 90-day mission, Spirit far exceeded expectations and operated for over six years, providing valuable 
             insights into the Martian environment. The rover helped identify the presence of volcanic rocks, ancient river channels, and evidence of past water flows. Although 
             its mission ended in 2010 after getting stuck in sand, Spirit's legacy continues to contribute to our understanding of the Red Planet's history and geology.
@@ -269,8 +269,8 @@ const roverSearch = (dateParam, active, camParam) => {
       setResponseTitle('Opportunity');
       setRoverDescription(
         <>
-          The <a href="https://solarsystem.nasa.gov/missions/opportunity/in-depth/"><span>Opportunity</span></a> 
-            rover was a remarkable part of NASA's Mars Exploration Rover mission. Touching down on Mars on January 25, 2004, Opportunity exceeded all expectations by continuing 
+          The <a href="https://solarsystem.nasa.gov/missions/opportunity/in-depth/"><span>Opportunity</span></a> rover was a remarkable part of NASA's Mars Exploration Rover mission. 
+            Touching down on Mars on January 25, 2004, Opportunity exceeded all expectations by continuing 
             its mission for nearly 15 years. Its exploration of the Martian surface provided invaluable insights into the planet's history and geology. Opportunity's discoveries 
             included evidence of past water on Mars and geological features that suggested a watery environment in the planet's past. The rover's remarkable longevity and the scientific 
             data it gathered significantly expanded our understanding of Mars and its potential for past habitability.
@@ -313,6 +313,8 @@ const roverSearch = (dateParam, active, camParam) => {
           <span class="visually-hidden">Next</span>
         </a>
       `;
+      // Scroll down 50vh
+      window.scrollTo(0, window.scrollY + window.innerHeight * 0.8);
     })
     .catch(error => {
       console.error('Error fetching images:', error);
@@ -363,7 +365,7 @@ const roverSearch = (dateParam, active, camParam) => {
             </div>
             <h3 id="search-alert">{searchAlert}</h3>
             <div id="buttons" className="d-flex flex-wrap justify-content-center align-items-center">
-              <button className="btn btn-primary" onClick={apiSearch}>
+              <button className="Search btn btn-primary" onClick={apiSearch}>
                 Search
               </button>
             </div>
