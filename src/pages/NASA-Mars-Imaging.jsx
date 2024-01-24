@@ -3,14 +3,14 @@ import { useState } from 'react';
 
 
 export default function Imaging() {
-  let date = new Date();
-  let year = date.getFullYear();
-  let month = (date.getMonth()+1).toString();
-  if (month.length === 1) {
-      month = '0' + month;
-  }
-  let today = String(date.getDate()).padStart(2,'0');
-  const datePattern = `${year}-${month}-${today}`;
+  // let date = new Date();
+  // let year = date.getFullYear();
+  // let month = (date.getMonth()+1).toString();
+  // if (month.length === 1) {
+  //     month = '0' + month;
+  // }
+  // let today = String(date.getDate()).padStart(2,'0');
+  // const datePattern = `${year}-${month}-${today}`;
 
   const [searchTitle, setSearchTitle] = useState('');
   const [searchDescription, setSearchDescription] = useState('');
@@ -281,11 +281,42 @@ const roverSearch = (dateParam, active, camParam) => {
   }
 
   const nasaApiKey = '2QbpLQBozt59EwMHuzZseMAHas7Z9Q6X2gVu7UFm';
-    const apiUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/${active}/photos?earth_date=${dateParam}&camera=${camParam}&api_key=${nasaApiKey}&per_page=6`;
+  const apiUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/${active}/photos?earth_date=${dateParam}&camera=${camParam}&api_key=${nasaApiKey}&per_page=6`;
 
-    // fetch(apiUrl)
-    // .then(response => response.json())
-    // .then(data => {
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      // Process the API response and extract image URLs
+
+      const slideshow = document.getElementById('slideshow-inner');
+      slideshow.innerHTML = ''; // Clear existing content
+
+      // Dynamically add carousel items and controls
+      data.photos.forEach((photo, index) => {
+        const isActive = index === 0 ? 'active' : ''; // Add 'active' class to the first item
+
+        slideshow.innerHTML += `
+          <div class="carousel-item ${isActive}">
+            <img src="${photo.img_src}" class="d-block w-100" alt="Mars Rover Image">
+          </div>
+        `;
+      });
+
+      // Add carousel controls
+      slideshow.innerHTML += `
+        <a class="carousel-control-prev" href="#slideshow" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#slideshow" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      `;
+    })
+    .catch(error => {
+      console.error('Error fetching images:', error);
+    });
 };
 
   return (
